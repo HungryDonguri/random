@@ -83,11 +83,11 @@ footer {
     width: 100%; /* フッターを画面幅いっぱいにする */
 }
 input[type="text"] {
-    width: 100%;
-    max-width: 300px;
+    width: 100%; /* 親要素の幅に依存 */
+    max-width: 100%; /* 親要素の幅を超えないようにする */
     padding: 0.5rem;
     border: 1px solid #ccc;
-    border-radius: 8px; /* 角を丸くする */
+    border-radius: 8px;
     font-size: 1rem;
     outline: none;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
@@ -104,3 +104,10 @@ input[type="text"]:focus {
     margin-top: 2rem; /* ボタンなどとの間にスペースを追加 */
 }
 
+.user-input {
+    display: flex; /* 子要素を横並びにする */
+    justify-content: center; /* 子要素を中央揃え */
+    width: 100%; /* 必要に応じて幅を調整 */
+    max-width: 350px; /* 無駄な横幅を制限 */
+    margin: 0 auto; /* 中央揃え */
+}

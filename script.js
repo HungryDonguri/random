@@ -7,6 +7,6 @@ if (userLang.startsWith('ja')) {
     window.location.href = '/ja';
 } else {
     document.querySelector('p').innerHTML = 'If you cannot redirect, click <a>here</a>.';
-    document.querySelector('a').href = '/ja';
-    window.location.href = '/en';
+    document.querySelector('a').href = 'ja/';
+    window.location.href = 'en/';
 }

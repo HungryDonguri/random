@@ -16,7 +16,7 @@ const pageLang = currentPath.includes('/en') ? 'en' : 'ja'; // '/en'が含まれ
 // JSONファイルとプロジェクトデータを非同期で読み込む
 async function loadJSON() {
     try {
-        const response = await fetch('../../data.json');
+        const response = await fetch('./data.json');
         if (!response.ok) {
             throw new Error('Failed to load data.json');
         }
@@ -29,7 +29,7 @@ async function loadJSON() {
 
 // 指定されたプロジェクトのinstr.txtまたはmemocre.txtを取得
 async function fetchProdataFile(projectKey, fileName) {
-    const filePath = `../../prodata/${projectKey}/${fileName}`;
+    const filePath = `./prodata/${projectKey}/${fileName}`;
     try {
         const response = await fetch(filePath);
         if (!response.ok) {
